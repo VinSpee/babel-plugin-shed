@@ -22,19 +22,19 @@ module.exports = function (babel) {
         const tag = path.node;
         if (isShedTag(tag)) {
           const element = path.node.openingElement.name.object.name;
-          console.log(element);
           const firstLetter = element[0];
           if(firstLetter === firstLetter.toLowerCase()) {
             path.replaceWith(
               t.JSXElement(
                 t.JSXOpeningElement(
                   t.JSXIdentifier('Shed'),
-                  [
-                    t.JSXAttribute(
-                      t.JSXIdentifier('component'),
-                      t.StringLiteral(element)
+                    path.node.openingElement.attributes.concat(
+                      t.JSXAttribute(
+                        t.JSXIdentifier('component'),
+                        t.StringLiteral(element)
+                      )
                     )
-                  ]
+                  )
                 ),
                 t.JSXClosingElement(
                   t.JSXIdentifier('Shed')
