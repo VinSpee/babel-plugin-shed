@@ -28,19 +28,17 @@ module.exports = function (babel) {
               t.JSXElement(
                 t.JSXOpeningElement(
                   t.JSXIdentifier('Shed'),
-                    path.node.openingElement.attributes.concat(
-                      t.JSXAttribute(
-                        t.JSXIdentifier('component'),
-                        t.StringLiteral(element)
-                      )
+                  path.node.openingElement.attributes.concat(
+                    t.JSXAttribute(
+                      t.JSXIdentifier('component'),
+                      t.StringLiteral(element)
                     )
                   )
                 ),
-                t.JSXClosingElement(
-                  t.JSXIdentifier('Shed')
-                ),
+                t.JSXClosingElement(t.JSXIdentifier('Shed')),
                 path.node.children
-              ));
+              )
+            );
           }
         }
       }
