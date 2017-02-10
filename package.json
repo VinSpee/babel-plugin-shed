@@ -1,0 +1,20 @@
+{
+  "name": "babel-plugin-shed",
+  "version": "1.0.0-alpha.1",
+  "description": "babel plugin for transforming sugared Shed react components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "babel-plugin",
+    "shed",
+    "functional",
+    "css",
+    "atomic",
+    "css",
+    "css-in-js"
+  ],
+  "author": "Vince Speelman",
+  "license": "MIT"
+}
